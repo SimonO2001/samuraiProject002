@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { Samurai } from '../models/Samurai';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SamuraiService {
 
+
+  urlNew: string = environment.apiUrl + 'Samurai';
   url:string ="https://localhost:7221/api/Samurai";
   constructor(private http: HttpClient) { }
 
